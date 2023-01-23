@@ -1,9 +1,10 @@
 import React from "react";
 import { AiFillAccountBook } from "react-icons/ai";
+import { MdOutlineKeyboard } from "react-icons/md";
 
 interface IIcon {
   name: string;
-  component: React.FC;
+  Component: React.FC;
 }
 
 interface IIconsContext {
@@ -11,7 +12,10 @@ interface IIconsContext {
 }
 
 const IconsContext = React.createContext<IIconsContext>({
-  icons: [{ name: "home", component: AiFillAccountBook }],
+  icons: [
+    { name: "home", Component: AiFillAccountBook },
+    { name: "keyboard", Component: MdOutlineKeyboard },
+  ],
 });
 interface IIconsProviderProps {
   children: React.ReactNode;

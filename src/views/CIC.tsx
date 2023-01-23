@@ -26,6 +26,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import { BiPhoneIncoming, BiStar } from "react-icons/bi";
+import { HomePage } from "../pages";
 
 function AirbnbCard() {
   const property = {
@@ -105,7 +106,14 @@ const CIC = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<></>} />
+        <Route
+          path="/"
+          element={
+            <>
+              <HomePage />
+            </>
+          }
+        />
       </Routes>
     </>
   );
