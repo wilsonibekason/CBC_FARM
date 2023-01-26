@@ -45,6 +45,7 @@ class LinkedList {
 const list = new LinkedList();
 
 console.log(list.isEmpty(), list.getSize(), list.prepend(20));
+console.table(list.prepend(30), list.print(), list.prepend(40), list.print());
 
 class Trapezium {
   constructor(_height, _base, _length, _width) {
