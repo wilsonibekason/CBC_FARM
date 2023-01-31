@@ -1,6 +1,28 @@
 import React from "react";
 import { NavbarTopStyles } from "../../../../styles/custom/nav/Navbar.top";
-import { Box, BoxProps, Image, Text, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  BoxProps,
+  Image,
+  Text,
+  useDisclosure,
+  useBoolean,
+  UseCheckboxGroupReturn,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  Button,
+} from "@chakra-ui/react";
 import { useIcons } from "../../../../services/context/icons/IconsContext";
 import { IconType, IconBaseProps } from "react-icons";
 import { MdKeyboardArrowDown, MdOutlineKeyboard } from "react-icons/md";
@@ -13,7 +35,9 @@ import {
   AiTwotonePhone,
   AiOutlineYoutube,
   AiFillInstagram,
+  AiOutlineArrowDown,
 } from "react-icons/ai";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import {} from "@emotion/react";
 import { Global } from "../../../../styles/themes/themes.global";
 import { TopDropdown } from "../../../common/export";
@@ -51,7 +75,13 @@ const NavbarTop = () => {
   const { TopWrapper } = NavbarTopStyles;
   const { icons } = useIcons();
   const { GlobalValues } = Global;
-  const { isOpen, onToggle } = useDisclosure();
+  const [isOpen, onToggle] = useBoolean();
+  const {
+    isOpen: dropdownToggle,
+    onClose: dropdownClose,
+    onToggle: setDropdownToggle,
+  } = useDisclosure();
+
   return (
     <>
       <Box paddingX={"16"}>
@@ -61,28 +91,49 @@ const NavbarTop = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Box
-            display={["-webkit-inline-flex", "flex"]}
-            flexDir={"row"}
-            alignItems={"center"}
-            paddingY={GlobalValues.NavPadY}
-            rowGap={20}
-            color={"gray.700"}
-            onClick={onToggle}
-            cursor={"pointer"}
-          >
-            <Text
-              fontFamily={["-moz-initial", "fantasy", "monospace"]}
+          <Menu>
+            <MenuButton
+              as={Button}
+              // @ts-ignore
+              rightIcon={<ChevronDownIcon />}
+              color={"gray.700"}
+              cursor={"pointer"}
+              fontFamily={["-moz-initial", "Rubik", "SproDisplay"]}
               fontSize={"17px"}
-              fontWeight={"400"}
-              position={"relative"}
+              fontWeight={"semibold"}
               letterSpacing={"tighter"}
+              display={"flex"}
+              lineHeight={"5"}
+              suppressContentEditableWarning
             >
               Country Websites
-              <TopDropdown isOpen={isOpen} />
-            </Text>
-            <MdKeyboardArrowDown size={20} />
-          </Box>
+            </MenuButton>
+            <MenuList bgColor={"slategrey"} p={"2"}>
+              <MenuItem>Download</MenuItem>
+              <MenuItem>Create a Copy</MenuItem>
+              <MenuItem>Mark as Draft</MenuItem>
+              <MenuItem>Delete</MenuItem>
+              <MenuItem>Attend a Workshop</MenuItem>
+            </MenuList>
+          </Menu>
+          {/*  */}
+
+          <Drawer
+            placement={"top"}
+            onClose={dropdownClose}
+            isOpen={dropdownToggle}
+          >
+            <DrawerOverlay />
+            <DrawerContent>
+              <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
+              <DrawerBody>
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+              </DrawerBody>
+            </DrawerContent>
+          </Drawer>
+
           {/*  */}
           <Box display={"flex"} experimental_spaceX={"10"}>
             <Box
