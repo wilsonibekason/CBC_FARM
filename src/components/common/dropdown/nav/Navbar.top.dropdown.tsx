@@ -14,6 +14,7 @@ const TopDropdown: React.FC<TopDropdownProps> = ({ isOpen }) => {
           bgColor={"gray.50"}
           shadow={"lg"}
           rounded={"lg"}
+          right={"15"}
         >
           <Box
             width={"full"}
