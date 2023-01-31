@@ -19,12 +19,11 @@ import {
 
 import { IconsProvider } from "./services/context/icons/IconsContext";
 import { IconProvider } from "./services/context/icons/IconContext";
+import { theme } from "./styles/themes/themes.chakra";
 
 const client = new QueryClient({
   defaultOptions: { queries: { refetchOnWindowFocus: true } },
 });
-
-const theme = extendTheme({});
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

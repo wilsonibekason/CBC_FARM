@@ -6,5 +6,21 @@ body{
 html{
 @apply text-sm leading-5 text-[#545454]
 }
+@font-face {
+    font-family: "Mulish";
+    src: url("../../../public/fonts/Mulish-Regular.ttf");
+}
+@font-face {
+    font-family: "Lora";
+    src: url("../../../public/fonts/Lora-Regular.ttf");
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("../../../public/fonts/Rubik-Regular.ttf");
+}
+@font-face {
+    font-family: "SproDisplay";
+    src: url("../../../public/fonts/SFPRODISPLAYREGULAR.OTF");
+}
 @tailwind components;
 @tailwind utilities;

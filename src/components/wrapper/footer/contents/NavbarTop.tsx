@@ -141,7 +141,14 @@ const NavbarTop = () => {
                 <Text as={"p"} fontSize={"md"} color={"blackAlpha.900"}>
                   Office Hour
                 </Text>
-                <Text>08:40am - 09:30am</Text>
+                <Text
+                  as={"h1"}
+                  fontSize={"xl"}
+                  fontWeight={"light"}
+                  fontFamily={"monospace"}
+                >
+                  08:40am - 09:30am
+                </Text>
               </Box>
             </Box>
           </Box>
@@ -165,10 +172,22 @@ const NavbarTop = () => {
               fontSize={"lg"}
               fontWeight={"semibold"}
             >
-              <Text as={"p"} fontSize={"md"} color={"blackAlpha.900"}>
+              <Text
+                as={"p"}
+                fontSize={"lg"}
+                fontWeight={"medium"}
+                color={"blackAlpha.900"}
+              >
                 Call Us
               </Text>
-              <Text>+123 0903848588</Text>
+              <Text
+                as={"h1"}
+                fontSize={"xl"}
+                fontWeight={"light"}
+                fontFamily={"monospace"}
+              >
+                +123 0903848588
+              </Text>
             </Box>
           </Box>
         </Box>

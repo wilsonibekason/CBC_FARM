@@ -5,7 +5,14 @@ module.exports = {
     "./public/**/*.{js, jsx, ts, tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "mulish": ["Mulish", "cursive"],
+        "lora": ["Lora", "cursive"],
+        "rubik": ["Rubik", "cursive"],
+        "sprodisplay": ["SproDisplay", "san-serif"],
+      }
+    },
   },
   plugins: [],
 };
