@@ -5,7 +5,7 @@ import SectionCards from "./sections/SectionCards";
 const ContentLayout = () => {
   return (
     <>
-      <Box maxW={"full"} flexDir={"column"} display={"flex"}>
+      <Box maxW={"full"} flexDir={"column"} display={"flex"} w={"full"}>
         <SectionCards />
       </Box>
     </>
