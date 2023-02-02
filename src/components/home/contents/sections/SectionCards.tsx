@@ -70,6 +70,7 @@ const SectionCards = () => {
                     py={"28"}
                     borderRadius={"xl"}
                     shadow={"xl"}
+                    _groupHover={{ color: "red" }}
                   >
                     <Box
                       w={"full"}
