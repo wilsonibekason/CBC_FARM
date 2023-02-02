@@ -22,4 +22,13 @@ const NavDropdownContent = [
   },
 ];
 
-export { NavDropdownContent };
+const SectionOneData = [
+  {
+    header: [
+      { title: "Know Your", span: "Farmer" },
+      { title: "Love your", span: "Food" },
+    ],
+  },
+];
+
+export { NavDropdownContent, SectionOneData };
