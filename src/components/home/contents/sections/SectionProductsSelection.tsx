@@ -18,6 +18,7 @@ import {
 import {} from "@chakra-ui/theme";
 import {} from "@chakra-ui/theme-tools";
 import { icons } from "../../../../assets/images/index";
+import { CheckIcon, ArrowRightIcon } from "@chakra-ui/icons";
 
 const SectionProductsSelection = () => {
   return (
@@ -86,6 +87,7 @@ const SectionProductsSelection = () => {
                     display={"flex"}
                     position={"relative"}
                     w={"20%"}
+                    rounded={"md"}
                   >
                     {" "}
                     <Image
@@ -95,6 +97,11 @@ const SectionProductsSelection = () => {
                       w={"full"}
                       h={"full"}
                       objectFit={"cover"}
+                      saturate={0}
+                      backdropHueRotate={"20"}
+                      blur={"lg"}
+                      _hover={{ opacity: "md" }}
+                      cursor={"pointer"}
                     />
                     <Box
                       py={"10"}
@@ -105,8 +112,8 @@ const SectionProductsSelection = () => {
                       bg={"whiteAlpha.500"}
                       right={0}
                       zIndex={"modal"}
-                      shadow={"2xl"}
-                      mr={"-30"}
+                      shadow={"4xl"}
+                      mr={"-20"}
                       bottom={0}
                       mt={"40"}
                       alignItems={"center"}
@@ -129,9 +136,34 @@ const SectionProductsSelection = () => {
                         experimental_spaceY={"5"}
                         rounded={"lg"}
                         py={"5"}
+                        position={"relative"}
                       >
-                        <Text>Fresh Tomatoes</Text>
-                        <Text>
+                        {/* Check Container */}
+                        <Box
+                          as={"section"}
+                          pos={"absolute"}
+                          maxW={"12"}
+                          maxH={"12"}
+                          w={"full"}
+                          h={"full"}
+                          display={"flex"}
+                          alignItems={"center"}
+                          justifyContent={"center"}
+                          bgColor={"orange.400"}
+                          rounded={"full"}
+                          top={"-16"}
+                          right={"-8"}
+                        >
+                          <ArrowRightIcon />{" "}
+                        </Box>
+                        <Text
+                          fontSize={"2xl"}
+                          color={"purple.500"}
+                          fontWeight={"semibold"}
+                        >
+                          Fresh Tomatoes
+                        </Text>
+                        <Text fontSize={"lg"}>
                           We only grow the best organic and agriculture products
                           in our farms.
                         </Text>
