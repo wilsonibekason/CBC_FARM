@@ -19,6 +19,7 @@ import {} from "@chakra-ui/theme";
 import {} from "@chakra-ui/theme-tools";
 import { icons } from "../../../../assets/images/index";
 import { CheckIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import { CountUpProps, useCountUp } from "react-countup";
 
 const SectionProductsSelection = () => {
   return (
@@ -77,7 +78,7 @@ const SectionProductsSelection = () => {
               rowGap={20}
               columnGap={250}
             >
-              {Array(3)
+              {Array(6)
                 .fill(0)
                 .map((_, i) => (
                   <Flex

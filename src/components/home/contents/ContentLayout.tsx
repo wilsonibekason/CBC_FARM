@@ -1,7 +1,12 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import SectionCards from "./sections/SectionCards";
-import { SectionOne, SectionTwo, ProductsSelections } from "./sections";
+import {
+  SectionOne,
+  SectionTwo,
+  ProductsSelections,
+  Countup,
+} from "./sections";
 
 const ContentLayout = () => {
   return (
@@ -17,6 +22,7 @@ const ContentLayout = () => {
         <SectionOne />
         <SectionTwo />
         <ProductsSelections />
+        <Countup />
       </Box>
     </>
   );
