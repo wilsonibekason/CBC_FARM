@@ -34,12 +34,15 @@ const SectionFive = () => {
     <Box py={20} maxW={"full"}>
       <Box
         as={"div"}
-        bgImage={icons.imageBg}
+        bgImage={icons.forest}
         bgPos={"center"}
         w={"full"}
         bgRepeat={"no-repeat"}
         bgSize={"cover"}
         py={40}
+        filter="grayscale(80%)"
+        // blur="2px"
+        // brightness="40%"
       >
         <Flex align={"center"}>
           {/* Component One */}

@@ -108,7 +108,9 @@ const SectionFour = () => {
               bgRepeat="no-repeat"
               bgSize={"cover"}
               mb={2}
+              cursor={"pointer"}
               opacity={20}
+              _hover={{ brightness: "40%", filter: "grayscale(60%)" }}
             >
               <ButtonGroup
                 gap="4"

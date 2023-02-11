@@ -60,4 +60,28 @@ const SectionCountupData = [
   },
 ];
 
-export { NavDropdownContent, SectionOneData, SectionCountupData };
+const GalleryCategoryData = [
+  {
+    id: uuid(),
+    name: "all",
+  },
+  {
+    id: uuid(),
+    name: "Farm Tools",
+  },
+  {
+    id: uuid(),
+    name: "Implements",
+  },
+  {
+    id: uuid(),
+    name: "Food Stuff",
+  },
+];
+
+export {
+  NavDropdownContent,
+  SectionOneData,
+  SectionCountupData,
+  GalleryCategoryData,
+};
