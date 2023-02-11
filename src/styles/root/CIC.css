@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind variants;
 body{
-    @apply bg-black
+    @apply bg-white
 }
 html{
 @apply text-sm leading-5 text-[#545454]

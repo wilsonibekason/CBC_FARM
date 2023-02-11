@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import React from "react";
 import Navbar from "../footer/Navbar";
 interface WrapperProps {
@@ -6,8 +7,10 @@ interface WrapperProps {
 const Wrapper: React.FC<WrapperProps> = ({ children }) => {
   return (
     <>
-      <Navbar />
-      {children}
+      <Box bgColor={"whiteAlpha.300"}>
+        <Navbar />
+        {children}
+      </Box>
     </>
   );
 };
