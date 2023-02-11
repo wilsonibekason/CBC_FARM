@@ -7,6 +7,7 @@ import {
   ProductsSelections,
   Countup,
   SectionFour,
+  SectionFive,
 } from "./sections";
 
 const ContentLayout = () => {
@@ -25,6 +26,7 @@ const ContentLayout = () => {
         <ProductsSelections />
         <Countup />
         <SectionFour />
+        <SectionFive />
       </Box>
     </>
   );

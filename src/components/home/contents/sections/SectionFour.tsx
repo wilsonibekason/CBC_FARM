@@ -202,6 +202,7 @@ const SectionFour = () => {
                       h={"full"}
                       objectFit={"cover"}
                       rounded={"xl"}
+                      cursor={"pointer"}
                     />
                   </Box>
                   <Flex
