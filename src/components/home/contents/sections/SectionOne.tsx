@@ -101,7 +101,7 @@ const SectionOne = () => {
             </Box>
 
             {/*  */}
-            <Textcomplete 
+            <Text
               fontSize={"xl"}
               color={"gray.600"}
               letterSpacing={"wide"}
@@ -111,7 +111,7 @@ const SectionOne = () => {
               We only grow the best organic and agriculture products in our
               farms. Our market-style CSA lets you choose the fruits, veggies,
               and produce you want!
-            </Textcomplete>
+            </Text>
           </Box>
         </Box>
         <Box
