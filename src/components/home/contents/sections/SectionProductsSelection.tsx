@@ -34,6 +34,15 @@ const SectionProductsSelection = () => {
           {" "}
           {/* Top Component */}
           <Flex direction={"column"} alignItems={"center"} justify={"center"}>
+            <Box w={"16"} h={"16"}>
+              <Image
+                src={icons.icon1}
+                w={"full"}
+                maxW={"full"}
+                h={"full"}
+                maxH={"full"}
+              />
+            </Box>
             <Text
               as={"h1"}
               textTransform={"capitalize"}
