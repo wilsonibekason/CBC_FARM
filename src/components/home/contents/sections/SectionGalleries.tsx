@@ -88,6 +88,7 @@ const SectionGalleries = () => {
           {/* Gallary Components */}
           <Flex flexWrap={"wrap"} direction={"row"} align={"center"}>
             {" "}
+            56
             {Array(6)
               .fill(0)
               .map((_, i) => (
