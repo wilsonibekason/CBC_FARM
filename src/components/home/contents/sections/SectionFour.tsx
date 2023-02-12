@@ -26,6 +26,8 @@ import {
 } from "@chakra-ui/react";
 import { icons } from "../../../../assets/images";
 import { motion, isValidMotionProp } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const ChakraBox = chakra(motion.div, {
   /**
    * Allow motion props and non-Chakra props to be forwarded.
@@ -33,7 +35,13 @@ const ChakraBox = chakra(motion.div, {
   shouldForwardProp: (prop) =>
     isValidMotionProp(prop) || shouldForwardProp(prop),
 });
+
 const SectionFour = () => {
+  // Initialise AOS
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <Box py={"40"}>
       <Flex direction={"column"} justify={"center"} experimental_spaceY={"20"}>
@@ -48,6 +56,7 @@ const SectionFour = () => {
             />
           </Box>
           <Text
+            data-aos="fade-left"
             as={"h1"}
             textTransform={"capitalize"}
             fontSize={"7xl"}

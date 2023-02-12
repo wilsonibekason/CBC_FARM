@@ -40,6 +40,7 @@ const SectionFive = () => {
         bgRepeat={"no-repeat"}
         bgSize={"cover"}
         py={40}
+        px={"4"}
         filter="grayscale(80%)"
         // blur="2px"
         // brightness="40%"
@@ -73,11 +74,12 @@ const SectionFive = () => {
                 w={"50%"}
                 letterSpacing={"tight"}
                 lineHeight={"short"}
+                color={"black"}
               >
                 FAQ'S, Have{" "}
                 <Text
                   as={"span"}
-                  color={"blackAlpha.600"}
+                  color={"blackAlpha.900"}
                   pl={"5"}
                   wordBreak={"break-all"}
                   w={"full"}
@@ -128,7 +130,7 @@ const SectionFive = () => {
               px={"10"}
               direction={"row"}
               align={"center"}
-              bgColor={"orange.800"}
+              bgColor={"orange.500"}
               right={"0px"}
               top={"80"}
               experimental_spaceX={"5"}

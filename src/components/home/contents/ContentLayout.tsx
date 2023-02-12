@@ -8,7 +8,9 @@ import {
   Countup,
   SectionFour,
   SectionFive,
-  Galleries
+  Galleries,
+  Carousel,
+  Map,
 } from "./sections";
 
 const ContentLayout = () => {
@@ -21,6 +23,7 @@ const ContentLayout = () => {
         w={"full"}
         fontFamily={"Rubik"}
       >
+        <Carousel />
         <SectionCards />
         <SectionOne />
         <SectionTwo />
@@ -28,7 +31,8 @@ const ContentLayout = () => {
         <Countup />
         <SectionFour />
         <SectionFive />
-        <Galleries/>
+        <Galleries />
+        <Map />
       </Box>
     </>
   );
