@@ -5,8 +5,8 @@ import imageBg from "./testimonial.jpg";
 import forest from "./forest.jpg";
 import agri  from "./agri.jpg";
 import agri1  from "./agri2.jpg";
-import agri2  from "./agri.jpg";
-import agri3  from "./agri.jpg";
+import agri2  from "./agri3.jpg";
+import agri3  from "./agri4.jpg";
 
 const icons = { icon1, icon2, icon3, imageBg, forest, agri, agri2, agri1, agri3 };
 

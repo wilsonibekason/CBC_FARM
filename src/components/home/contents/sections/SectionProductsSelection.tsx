@@ -20,8 +20,15 @@ import {} from "@chakra-ui/theme-tools";
 import { icons } from "../../../../assets/images/index";
 import { CheckIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import { CountUpProps, useCountUp } from "react-countup";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SectionProductsSelection = () => {
+  // Initialise AOS
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       <Box w={"full"} maxW={"full"} h={"full"} maxH={"full"}>
@@ -82,15 +89,17 @@ const SectionProductsSelection = () => {
             <Flex
               direction={"row"}
               alignItems={"center"}
+              justify={"center"}
               w={"full"}
               flexWrap={"wrap"}
               rowGap={20}
-              columnGap={250}
+              columnGap={200}
             >
               {Array(6)
                 .fill(0)
                 .map((_, i) => (
                   <Flex
+                    as={"div"}
                     h={"320px"}
                     key={i}
                     bgColor={"whatsapp.100"}
@@ -98,6 +107,7 @@ const SectionProductsSelection = () => {
                     position={"relative"}
                     w={"20%"}
                     rounded={"md"}
+                    data-aos="fade-left"
                   >
                     {" "}
                     <Image
@@ -136,9 +146,9 @@ const SectionProductsSelection = () => {
                       <Flex
                         direction={"column"}
                         justify={"center"}
+                        align={"center"}
                         fontSize={"xl"}
                         color={"gray.600"}
-                        letterSpacing={"wide"}
                         maxW={["container.lg", "70%"]}
                         fontFamily={"Rubik"}
                         w={"full"}
@@ -168,13 +178,14 @@ const SectionProductsSelection = () => {
                           <ArrowRightIcon />{" "}
                         </Box>
                         <Text
-                          fontSize={"2xl"}
+                          fontSize={"xl"}
                           color={"purple.500"}
                           fontWeight={"semibold"}
+                          whiteSpace={"nowrap"}
                         >
                           Fresh Tomatoes
                         </Text>
-                        <Text fontSize={"lg"}>
+                        <Text fontSize={"sm"}>
                           We only grow the best organic and agriculture products
                           in our farms.
                         </Text>

@@ -7,8 +7,10 @@ import {
   Grid,
   Circle,
   SkeletonCircle,
+  Image,
 } from "@chakra-ui/react";
 import React from "react";
+import { icons } from "../../../../assets/images";
 import { Global } from "../../../../styles/themes/themes.global";
 
 const SectionCards = () => {
@@ -56,45 +58,89 @@ const SectionCards = () => {
             </Text>
           </Box>
           {/*  */}
-          <Box w={"full"}>
-            <Grid templateColumns="repeat(5, 1fr)" gap={10}>
+          <Box
+            w={"full"}
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            {/* <Grid templateColumns="repeat(5, 1fr)" gap={10}> */}
+            <Flex
+              direction={"row"}
+              align={"center"}
+              justify={"center"}
+              wrap={"wrap"}
+              columnGap={3}
+            >
               {Array(5)
                 .fill(0)
                 .map((_, i) => (
                   <Box
-                    maxW="full"
+                    w={"full"}
+                    maxW="18%"
                     h="auto"
                     bg="gray.300"
                     key={i}
-                    px={"20"}
-                    py={"28"}
+                    role={"group"}
+                    cursor={"pointer"}
                     borderRadius={"xl"}
-                    shadow={"xl"}
-                    _groupHover={{ color: "red" }}
                   >
                     <Box
-                      w={"full"}
-                      h={"full"}
-                      display={"flex"}
-                      flexDir={"column"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
+                      px={"20"}
+                      py={16}
+                      bgSize={"100% 100%"}
+                      transition={"background 3s"}
+                      borderRadius={"inherit"}
+                      _groupHover={{
+                        bgColor: "red.500",
+                        borderRadius: "inherit",
+                        bgGradient: "linear(to-l, #7928CA, #FF0080)",
+                        backgroundPosition: "100% 100%",
+                      }}
+                      shadow={"xl"}
                     >
-                      <SkeletonCircle size={"20"} />
-                      <Text
-                        as={"h1"}
-                        fontSize={"2xl"}
-                        fontWeight={"semibold"}
-                        textAlign={"center"}
-                        fontFamily={"Mulish"}
-                        color={"gray.800"}
+                      <Box
+                        w={"full"}
+                        h={"full"}
+                        display={"flex"}
+                        flexDir={"column"}
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                        experimental_spaceY={"2"}
                       >
-                        Smart Irrigations
-                      </Text>
+                        <SkeletonCircle size={"20"} />
+                        <Box
+                          as={"section"}
+                          w={100}
+                          h={100}
+                          bgColor={"white"}
+                          rounded={"full"}
+                        >
+                          <Image
+                            src={icons.icon2}
+                            w={"full"}
+                            maxW={"full"}
+                            h={"full"}
+                            top={"-10%"}
+                          />
+                        </Box>
+
+                        <Text
+                          as={"h1"}
+                          fontSize={"xl"}
+                          fontWeight={"semibold"}
+                          textAlign={"center"}
+                          fontFamily={"Mulish"}
+                          color={"gray.800"}
+                        >
+                          Smart Irrigations
+                        </Text>
+                      </Box>
                     </Box>
                   </Box>
                 ))}
-            </Grid>
+              {/* </Grid> */}
+            </Flex>
           </Box>
           {/*  */}
         </Box>
