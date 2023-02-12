@@ -7,3 +7,4 @@ export { default as SectionFour } from "./SectionFour";
 export { default as SectionFive } from "./SectionFive";
 export {default as Galleries} from "./SectionGalleries"
 export {default as Carousel} from "./SectionCarousel"
+export {default as Map} from "./SectionMap"

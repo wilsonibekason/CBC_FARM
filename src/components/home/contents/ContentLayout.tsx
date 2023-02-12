@@ -10,6 +10,7 @@ import {
   SectionFive,
   Galleries,
   Carousel,
+  Map,
 } from "./sections";
 
 const ContentLayout = () => {
@@ -31,6 +32,7 @@ const ContentLayout = () => {
         <SectionFour />
         <SectionFive />
         <Galleries />
+        <Map />
       </Box>
     </>
   );
