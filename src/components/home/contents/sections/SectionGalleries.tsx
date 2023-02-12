@@ -15,8 +15,12 @@ import { Image } from "@chakra-ui/react";
 import { icons } from "../../../../assets/images";
 import { GalleryCategoryData } from "../../../../utils/data/data";
 import { ArrowRightIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import AOS from "aos";
 
 const SectionGalleries = () => {
+  React.useEffect(() => {
+    AOS.init(), AOS.refresh();
+  }, []);
   // arr.slice(0, 1).shift();
   return (
     <>
@@ -84,6 +88,7 @@ const SectionGalleries = () => {
                     experimental_spaceX={"5"}
                     fontWeight={"semibold"}
                     textTransform={"capitalize"}
+                    data-aos={"fade-right"}
                   >
                     {/* {first && <Box>/</Box>} */}
                     <Box />
@@ -104,9 +109,14 @@ const SectionGalleries = () => {
             </Flex>
           </Flex>
           {/* Gallary Components */}
-          <Flex flexWrap={"wrap"} direction={"row"} align={"center"} gap={3}>
+          <Flex
+            flexWrap={"wrap"}
+            direction={"row"}
+            align={"center"}
+            gap={3}
+            data-aos="fade-up-right"
+          >
             {" "}
-            56
             {Array(6)
               .fill(0)
               .map((_, i) => (
@@ -173,7 +183,12 @@ const SectionGalleries = () => {
               ))}
           </Flex>
           {/* Button */}
-          <Flex direction={"row"} align={"center"} justify={"center"}>
+          <Flex
+            direction={"row"}
+            align={"center"}
+            justify={"center"}
+            data-aos={"zoom-out-right"}
+          >
             <ButtonGroup>
               <Button
                 rightIcon={<ChevronRightIcon />}

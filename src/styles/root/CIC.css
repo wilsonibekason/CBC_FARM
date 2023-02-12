@@ -139,12 +139,4 @@ button {
 button:hover {
   background-position: 100% 100%;
 }
-body {
-  background: #e8e9ba;
-  display: grid;
-  grid-gap: 40px;
-  height: 100vh;
-  margin: 0;
-  grid-auto-flow: column;
-  place-content: center;
-}
+

@@ -23,6 +23,7 @@ import {
 import {} from "@chakra-ui/theme";
 import { icons } from "../../../../assets/images";
 import { BsPlay, BsTelephoneOutbound } from "react-icons/bs";
+import AOS from "aos";
 
 const ChakraBox = chakra(motion.div, {
   shouldForwardProp: (prop) =>
@@ -30,6 +31,9 @@ const ChakraBox = chakra(motion.div, {
 });
 
 const SectionFive = () => {
+  React.useEffect(() => {
+    AOS.init(), AOS.refresh();
+  }, []);
   return (
     <Box py={20} maxW={"full"}>
       <Box
@@ -88,7 +92,12 @@ const SectionFive = () => {
                 </Text>
               </Text>
               {/*  */}
-              <Accordion suppressHydrationWarning experimental_spaceY={"5"}>
+              <Accordion
+                suppressHydrationWarning
+                experimental_spaceY={"5"}
+                as={"div"}
+                data-aos={"zoom-out-down"}
+              >
                 {Array(5)
                   .fill(0)
                   .map((_, id) => (

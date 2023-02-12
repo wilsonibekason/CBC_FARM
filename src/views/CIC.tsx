@@ -27,6 +27,7 @@ import {
 } from "@chakra-ui/react";
 import { BiPhoneIncoming, BiStar } from "react-icons/bi";
 import { HomePage } from "../pages";
+import AOS from "aos";
 
 function AirbnbCard() {
   const property = {
@@ -103,6 +104,9 @@ function AirbnbCard() {
 }
 
 const CIC = () => {
+  React.useEffect(() => {
+    AOS.init(), AOS.refresh();
+  }, []);
   return (
     <>
       <Routes>
