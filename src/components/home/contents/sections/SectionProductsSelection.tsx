@@ -122,7 +122,7 @@ const SectionProductsSelection = () => {
                       bg={"whiteAlpha.500"}
                       right={0}
                       zIndex={"modal"}
-                      shadow={"4xl"}
+                      shadow={"2xl"}
                       mr={"-20"}
                       bottom={0}
                       mt={"40"}
@@ -163,6 +163,7 @@ const SectionProductsSelection = () => {
                           rounded={"full"}
                           top={"-16"}
                           right={"-8"}
+                          shadow={"2xl"}
                         >
                           <ArrowRightIcon />{" "}
                         </Box>

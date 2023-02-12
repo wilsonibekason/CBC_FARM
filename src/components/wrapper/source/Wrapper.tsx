@@ -9,7 +9,9 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
     <>
       <Box bgColor={"whiteAlpha.300"}>
         <Navbar />
-        {children}
+        <Box m={"auto"} maxW={"1280px"}>
+          {children}
+        </Box>
       </Box>
     </>
   );
