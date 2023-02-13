@@ -136,7 +136,7 @@ const SectionMap = () => {
               style={{ width: "100%", height: "100%" }}
               mapStyle="mapbox://styles/mapbox/streets-v9"
               mapboxAccessToken={MAPBOX_TOKEN}
-              mapLib={maplibregl}
+              // mapLib={maplibregl}
             >
               <Marker longitude={-122.4} latitude={37.8} color="red" />
             </Map>

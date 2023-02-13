@@ -11,6 +11,8 @@ import {
   Galleries,
   Carousel,
   Map,
+  Testimonials,
+  Partners,
 } from "./sections";
 
 const ContentLayout = () => {
@@ -33,6 +35,8 @@ const ContentLayout = () => {
         <SectionFive />
         <Galleries />
         <Map />
+        <Testimonials />
+        <Partners />
       </Box>
     </>
   );
