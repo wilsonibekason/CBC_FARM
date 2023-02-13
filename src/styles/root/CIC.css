@@ -4,7 +4,7 @@ body {
   @apply bg-white;
 }
 html {
-  @apply text-sm leading-5 text-[#545454];
+  @apply text-sm leading-5 text-[#545454] relative;
 }
 @font-face {
   font-family: "Mulish";

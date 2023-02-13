@@ -1,6 +1,18 @@
 import uuid from "react-uuid";
 import { ArrowForwardIcon, SearchIcon } from "@chakra-ui/icons";
 import { icons } from "../../assets/images";
+import {
+  AiOutlineFacebook,
+  AiFillLinkedin,
+  AiOutlineWhatsApp,
+  AiOutlineTwitter,
+  AiFillClockCircle,
+  AiTwotonePhone,
+  AiOutlineYoutube,
+  AiFillInstagram,
+  AiOutlineArrowDown,
+} from "react-icons/ai";
+import { ISocialIcon } from "../../types/global.type";
 const NavDropdownContent = [
   {
     id: uuid(),
@@ -79,9 +91,37 @@ const GalleryCategoryData = [
   },
 ];
 
+const SocialIcons: ISocialIcon[] = [
+  {
+    icon: <AiFillLinkedin size={30} />,
+    id: uuid(),
+  },
+  {
+    icon: <AiFillInstagram size={30} />,
+    id: uuid(),
+  },
+  {
+    icon: <AiOutlineFacebook size={30} />,
+    id: uuid(),
+  },
+  {
+    icon: <AiOutlineTwitter size={30} />,
+    id: uuid(),
+  },
+  {
+    icon: <AiOutlineWhatsApp size={30} />,
+    id: uuid(),
+  },
+  {
+    icon: <AiOutlineYoutube size={30} />,
+    id: uuid(),
+  },
+];
+
 export {
   NavDropdownContent,
   SectionOneData,
   SectionCountupData,
   GalleryCategoryData,
+  SocialIcons,
 };

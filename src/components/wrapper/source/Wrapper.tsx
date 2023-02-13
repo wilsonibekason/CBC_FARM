@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import Navbar from "../footer/Navbar";
+import Footer from "../Footers/Footer";
 interface WrapperProps {
   children: React.ReactNode;
 }
@@ -15,6 +16,8 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
         >
           {children}
         </Box>
+        <Footer />
+        <footer>djjjfjjjfjf</footer>
       </Box>
     </>
   );
