@@ -13,6 +13,7 @@ import {
   Map,
   Testimonials,
   Partners,
+  Journals,
 } from "./sections";
 
 const ContentLayout = () => {
@@ -37,6 +38,7 @@ const ContentLayout = () => {
         <Map />
         <Testimonials />
         <Partners />
+        <Journals />
       </Box>
     </>
   );

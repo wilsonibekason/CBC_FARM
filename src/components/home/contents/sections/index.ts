@@ -10,3 +10,4 @@ export { default as Carousel } from "./SectionCarousel";
 export { default as Map } from "./SectionMap";
 export { default as Testimonials } from "./SectionTestimonials";
 export { default as Partners } from "./SectionPartners";
+export { default as Journals } from "./SectionJournals";
