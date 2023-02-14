@@ -83,12 +83,14 @@ const NavbarTop = () => {
   } = useDisclosure();
 
   const [isNavVisible, setIsNavVisible] = React.useState(false);
-  const navbarRef = useRef<{ clientHeight: any }>(null);
+  const navbarRef = useRef<{ clientHeight: any }>({ clientHeight: "" });
+  // const navbarRef = React.createRef<HTMLDivElement>();
+
   React.useLayoutEffect(() => {
     const handleScroll = () => {
-      const navbarHeight = navbarRef.current.clientHeight!;
+      const navbarHeight = navbarRef?.current?.clientHeight;
       const scrollY = window.scrollY;
-      if (scrollY > navbarHeight) {
+      if (scrollY > navbarHeight!) {
         setIsNavVisible(true);
       } else {
         setIsNavVisible(false);
@@ -101,9 +103,12 @@ const NavbarTop = () => {
     };
   }, []);
 
-  const throttle = (func, delay) => {
-    let timeoutId;
-    return (...args) => {
+  const throttle = (
+    func: { (): void; (arg0: any): void },
+    delay: number | undefined
+  ) => {
+    let timeoutId: number | null;
+    return (...args: [any]) => {
       if (!timeoutId) {
         timeoutId = setTimeout(() => {
           func(...args);

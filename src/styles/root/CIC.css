@@ -140,3 +140,7 @@ button:hover {
   background-position: 100% 100%;
 }
 
+.navbar__toggle{
+  top: 0;
+  position: fixed
+}

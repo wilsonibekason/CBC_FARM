@@ -46,7 +46,7 @@ const FooterTop = () => {
         <Flex direction={"row"} align={"center"}>
           {" "}
           {/* Form Container */}
-          <Box w={"full"} maxW={"35%"} zIndex={"999"} position={"relative"}>
+          <Box w={"full"} maxW={"35%"} zIndex={"99"} position={"relative"}>
             <Box
               bgImage={icons.imageBg}
               w={"full"}
@@ -213,9 +213,7 @@ const FooterTop = () => {
                         justify={"center"}
                         experimental_spaceY={10}
                       >
-                        <Text fontSize={"xl"}>
-                          Opening Hours
-                        </Text>
+                        <Text fontSize={"xl"}>Opening Hours</Text>
                         {Array(3)
                           .fill(0)
                           .map((_, i) => (

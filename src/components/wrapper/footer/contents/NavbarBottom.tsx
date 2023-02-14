@@ -25,9 +25,53 @@ import { NavDropdownContent } from "../../../../utils/data/data";
 const NavbarBottom = () => {
   const ButtonRef = React.useRef<HTMLButtonElement>();
   const { Animations } = CustomStyles;
+  const [isNavVisible, setIsNavVisible] = React.useState(false);
+  const navbarRef = React.useRef<{ clientHeight: any }>({ clientHeight: "" });
+  // const navbarRef = React.createRef<HTMLDivElement>();
+
+  React.useLayoutEffect(() => {
+    const handleScroll = () => {
+      const navbarHeight = navbarRef?.current?.clientHeight;
+      const scrollY = window.scrollY;
+      if (scrollY > navbarHeight!) {
+        setIsNavVisible(true);
+      } else {
+        setIsNavVisible(false);
+      }
+    };
+    const throttledHandleScroll = throttle(handleScroll, 100);
+    window.addEventListener("scroll", throttledHandleScroll);
+    return () => {
+      window.removeEventListener("scroll", throttledHandleScroll);
+    };
+  }, []);
+
+  const throttle = (
+    func: { (): void; (arg0: any): void },
+    delay: number | undefined
+  ) => {
+    let timeoutId: number | null;
+    return (...args: [any]) => {
+      if (!timeoutId) {
+        timeoutId = setTimeout(() => {
+          func(...args);
+          timeoutId = null;
+        }, delay);
+      }
+    };
+  };
   return (
     <>
-      <Box paddingX={"6"}>
+      <Box
+        paddingX={"6"} //@ts-ignore
+        ref={navbarRef}
+        className={` ${isNavVisible && "navbar__toggle"}`}
+        w={"full"}
+        zIndex={"9999"}
+        transition={"ease-in"}
+        transitionDelay={"300s"}
+        transitionDuration={"100"}
+      >
         <Box
           paddingX={"10"}
           paddingY={"5"}
