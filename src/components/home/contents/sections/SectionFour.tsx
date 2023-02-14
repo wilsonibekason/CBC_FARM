@@ -120,6 +120,7 @@ const SectionFour = () => {
               cursor={"pointer"}
               opacity={20}
               _hover={{ brightness: "40%", filter: "grayscale(60%)" }}
+              data-aos={"fade-in-left"}
             >
               <ButtonGroup
                 gap="4"
@@ -153,11 +154,16 @@ const SectionFour = () => {
               </ButtonGroup>
             </Box>
             {/*  */}
-            <Text as={"div"} fontSize={"4xl"} fontWeight={"normal"}>
+            <Text
+              as={"div"}
+              fontSize={"4xl"}
+              fontWeight={"normal"}
+              data-aos={"fade-in-bottom"}
+            >
               Provide You The Highest Quality Product That Meets Your
               Expectation
             </Text>
-            <Stack direction={"row"} gap={4}>
+            <Stack direction={"row"} gap={4} data-aos={"zoom-in-left"}>
               <Button
                 rightIcon={<ChevronRightIcon />}
                 colorScheme={"blue"}
@@ -198,12 +204,14 @@ const SectionFour = () => {
               .fill(0)
               .map((_, i) => (
                 <Flex
+                  as={"div"}
                   key={i}
                   w={"full"}
                   maxW={"48%"}
                   direction={"column"}
                   justify={"center"}
                   experimental_spaceY={"8"}
+                  data-aos={"zoom-in-right"}
                 >
                   <Box h={"250px"} w={"full"}>
                     <Image

@@ -24,11 +24,17 @@ import { SocialIcons } from "../../../../utils/data/data";
 const FooterTop = () => {
   return (
     <>
-      <Box maxW={"full"} bgColor={"black"} py={10} px={5}>
+      <Box
+        maxW={"full"}
+        bgGradient={"linear(to-r, #494583, #585848)"}
+        py={10}
+        px={5}
+        position={"relative"}
+      >
         <Flex direction={"row"} align={"center"}>
           {" "}
           {/* Form Container */}
-          <Box w={"full"} maxW={"35%"} zIndex={"999"}>
+          <Box w={"full"} maxW={"35%"} zIndex={"999"} position={"relative"}>
             <Box
               bgImage={icons.imageBg}
               w={"full"}
@@ -40,6 +46,8 @@ const FooterTop = () => {
               //   bg="rgba(0,0,0,0.3)"
               backdropFilter="auto"
               backdropBlur="8px"
+              top={"-10px"}
+              // position={"absolute"}
             >
               <Flex
                 direction={"column"}
@@ -122,10 +130,15 @@ const FooterTop = () => {
             </Box>
           </Box>
           {/* Content Container */}
-          <Box w={"full"} maxW={"65%"} bgColor={"white"}>
-            <Flex w={"full"} direction={"column"} justify={"center"}>
+          <Box w={"full"} maxW={"65%"}>
+            <Flex
+              w={"full"}
+              direction={"column"}
+              justify={"center"}
+              experimental_spaceY={20}
+            >
               {" "}
-              <Flex>
+              <Flex align={"center"} justify={"space-between"}>
                 {/* Logo PNG */}
                 <Box
                   bgColor={"whiteAlpha.500"}
@@ -162,6 +175,36 @@ const FooterTop = () => {
                     </Text>
                   ))}
                 </Box>
+              </Flex>
+              {/* MAIN DESCRIOTION */}
+              <Flex align={"center"} experimental_spaceX={5}>
+                {Array(4)
+                  .fill(0)
+                  .map((_, i) => (
+                    <Flex
+                      direction={"column"}
+                      maxW={"24%"}
+                      key={i}
+                      w={"full"}
+                      p={2}
+                      h={"auto"}
+                      bgColor={"transparent"}
+                      justify={"center"}
+                      fontSize={"lg"}
+                      letterSpacing={"wide"}
+                      fontWeight={"medium"}
+                      color={"gray.300"}
+                    >
+                      <Text fontSize={"2xl"} mt={10}>
+                        Opening Hours
+                      </Text>
+                      {Array(3)
+                        .fill(0)
+                        .map((_, i) => (
+                          <Text>Mon-9am. Sat-10pm</Text>
+                        ))}
+                    </Flex>
+                  ))}
               </Flex>
             </Flex>
           </Box>

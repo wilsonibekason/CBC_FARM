@@ -12,9 +12,14 @@ import {
 import React from "react";
 import { icons } from "../../../../assets/images";
 import { Global } from "../../../../styles/themes/themes.global";
+import AOS from "aos";
 
 const SectionCards = () => {
   const { NavPadY } = Global.GlobalValues;
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       {/* <Container> */}
@@ -84,6 +89,7 @@ const SectionCards = () => {
                     role={"group"}
                     cursor={"pointer"}
                     borderRadius={"xl"}
+                    data-aos={"zoom-in-left"}
                   >
                     <Box
                       px={"20"}

@@ -15,6 +15,7 @@ import {
   Partners,
   Journals,
 } from "./sections";
+import Footer from "../../wrapper/Footers/Footer";
 
 const ContentLayout = () => {
   return (

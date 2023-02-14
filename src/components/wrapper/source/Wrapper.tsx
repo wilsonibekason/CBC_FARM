@@ -17,7 +17,6 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
           {children}
         </Box>
         <Footer />
-        <footer>djjjfjjjfjf</footer>
       </Box>
     </>
   );

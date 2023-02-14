@@ -3,9 +3,14 @@ import React from "react";
 import { Global } from "../../../../styles/themes/themes.global";
 import { icons } from "../../../../assets/images";
 import { SectionOneData } from "../../../../utils/data/data";
+import AOS from "aos";
 
 const SectionOne = () => {
   const { NavPadY } = Global.GlobalValues;
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     // <Container w={"full"}>
     <Box
@@ -48,6 +53,7 @@ const SectionOne = () => {
               display={"flex"}
               flexDir={"column"}
               experimental_spaceY={"10"}
+              data-aos={"zoom-in-bottom"}
             >
               {SectionOneData[0].header.map(({ title, span }) => (
                 <Text

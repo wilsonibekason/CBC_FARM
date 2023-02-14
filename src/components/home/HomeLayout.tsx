@@ -5,7 +5,7 @@ import ContentLayout from "./contents/ContentLayout";
 const HomeLayout = () => {
   return (
     <>
-      <Container w={"full"} h={"100vh"} maxW={"full"}>
+      <Container w={"full"} maxW={"full"}>
         <Box w={"full"} display={"flex"} flexDir={"column"}>
           <ContentLayout />
         </Box>
