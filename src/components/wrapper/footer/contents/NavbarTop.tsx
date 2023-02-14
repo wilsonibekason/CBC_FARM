@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { NavbarTopStyles } from "../../../../styles/custom/nav/Navbar.top";
 import {
   Box,
@@ -81,6 +81,38 @@ const NavbarTop = () => {
     onClose: dropdownClose,
     onToggle: setDropdownToggle,
   } = useDisclosure();
+
+  const [isNavVisible, setIsNavVisible] = React.useState(false);
+  const navbarRef = useRef<{ clientHeight: any }>(null);
+  React.useLayoutEffect(() => {
+    const handleScroll = () => {
+      const navbarHeight = navbarRef.current.clientHeight!;
+      const scrollY = window.scrollY;
+      if (scrollY > navbarHeight) {
+        setIsNavVisible(true);
+      } else {
+        setIsNavVisible(false);
+      }
+    };
+    const throttledHandleScroll = throttle(handleScroll, 100);
+    window.addEventListener("scroll", throttledHandleScroll);
+    return () => {
+      window.removeEventListener("scroll", throttledHandleScroll);
+    };
+  }, []);
+
+  const throttle = (func, delay) => {
+    let timeoutId;
+    return (...args) => {
+      if (!timeoutId) {
+        timeoutId = setTimeout(() => {
+          func(...args);
+          timeoutId = null;
+        }, delay);
+      }
+    };
+  };
+  const handleScroll = () => {};
 
   return (
     <>
