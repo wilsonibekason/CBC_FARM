@@ -26,7 +26,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import { BiPhoneIncoming, BiStar } from "react-icons/bi";
-import { HomePage } from "../pages";
+import { About, HomePage } from "../pages";
 import AOS from "aos";
 
 function AirbnbCard() {
@@ -117,6 +117,11 @@ const CIC = () => {
               <HomePage />
             </>
           }
+        />
+        <Route
+          path={"/about"}
+          element={<About />}
+          errorElement={<h1>This is an Error element</h1>}
         />
       </Routes>
     </>

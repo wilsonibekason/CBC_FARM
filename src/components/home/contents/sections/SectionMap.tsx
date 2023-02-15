@@ -18,6 +18,7 @@ import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Map, { Marker, Alignment } from "react-map-gl";
 import maplibregl from "maplibre-gl";
+import AOS from "aos";
 
 // const Map = ReactMapboxGl({
 //   accessToken:
@@ -32,6 +33,10 @@ const SectionMap = () => {
   });
   const MAPBOX_TOKEN =
     "pk.eyJ1Ijoid2lsaTEyMyIsImEiOiJja3cwaHR4ZDEwZng4MndwcTB4am9iY2kwIn0.4SciK8ia-VplCgi8zQAw6Q";
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       <Box py={20} maxW={"full"}>
@@ -44,6 +49,7 @@ const SectionMap = () => {
             w={"full"}
             maxW={"40%"}
             experimental_spaceY={"10"}
+            data-aos={"fade-in-left"}
           >
             <Box as={"a"} w={20} h={20}>
               <Image w={"full"} maxW={"full"} h={"full"} src={icons.icon1} />
@@ -129,7 +135,12 @@ const SectionMap = () => {
             </Flex>
           </Box>
           {/* Main Map Component  */}
-          <Flex direction={"column"} w={"full"} maxW={"60%"}>
+          <Flex
+            direction={"column"}
+            w={"full"}
+            maxW={"60%"}
+            data-aos={"zoom-in-right"}
+          >
             <Map
               {...viewState}
               onMove={(evt) => setViewState(evt.viewState)}

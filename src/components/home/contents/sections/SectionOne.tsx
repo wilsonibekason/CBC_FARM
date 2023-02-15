@@ -134,7 +134,7 @@ const SectionOne = () => {
             right={"20"}
             bgColor={"gray.700"}
             rounded={"20"}
-            zIndex={"modal"}
+            zIndex={"99"}
           >
             <Box w={"full"} display={"flex"} flexDir={"column"}>
               {/* Body UI */}
