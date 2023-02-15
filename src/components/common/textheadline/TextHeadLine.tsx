@@ -19,8 +19,9 @@ const TextHeadLine: React.FC<TextHeadLineProps> = ({ HeadImage, TextHead }) => {
         justify={"center"}
         as={"div"}
         data-aos={"fade-in-left"}
+        align={"center"}
       >
-        <Box w={"16"} h={"16"}>
+        <Box w={"24"} h={"24"}>
           <Image
             src={icons.icon1}
             w={"full"}

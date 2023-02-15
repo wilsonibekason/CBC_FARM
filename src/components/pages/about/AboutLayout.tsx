@@ -2,7 +2,7 @@ import React from "react";
 import {} from "@chakra-ui/icons";
 import {} from "@chakra-ui/theme";
 import { Box, Flex } from "@chakra-ui/react";
-import { Header, AboutSectionOne } from "./contents";
+import { Header, AboutSectionOne, Teams } from "./contents";
 import {
   Carousel,
   Countup,
@@ -26,6 +26,7 @@ const AboutLayout = () => {
         <Flex direction={"column"} justify={"center"}>
           <Header />
           <AboutSectionOne />
+          <Teams />
           <SectionOne />
           <Countup />
           <Map />
