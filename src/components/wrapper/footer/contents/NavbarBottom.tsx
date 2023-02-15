@@ -103,7 +103,8 @@ const NavbarBottom = () => {
                     outline={"none"}
                     border={"none"}
                     fontSize={["-moz-initial", "xl"]}
-                    fontWeight={"semibold"}
+                    fontWeight={"normal"}
+                    letterSpacing={"wider"}
                     _selected={{ border: "none", bg: "transparent" }}
                   >
                     Projects <ChevronDownIcon />

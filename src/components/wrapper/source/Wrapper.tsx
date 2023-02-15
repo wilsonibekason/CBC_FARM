@@ -8,7 +8,7 @@ interface WrapperProps {
 const Wrapper: React.FC<WrapperProps> = ({ children }) => {
   return (
     <>
-      <Box bgColor={"whiteAlpha.300"}>
+      <Box bgColor={"whiteAlpha.300"} fontFamily={"Rubik"}>
         <Navbar />
         <Box
           m={{ base: "0px", xl: "auto" }}

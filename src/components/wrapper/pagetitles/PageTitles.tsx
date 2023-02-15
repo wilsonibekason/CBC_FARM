@@ -10,7 +10,9 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 const PageTitles = forwardRef<
   HTMLDivElement,
   DetailedHTMLProps<
-    InputHTMLAttributes<HTMLDivElement> & { PageMessage?: string },
+    InputHTMLAttributes<HTMLDivElement> & {
+      PageMessage?: string | "About" | "Contact" | "Services";
+    },
     HTMLDivElement
   >
 >(({ PageMessage, className, ...rest }) => {
@@ -23,17 +25,34 @@ const PageTitles = forwardRef<
         bgPos={"center center"}
         bgRepeat={"no-repeat"}
         bgSize={"cover"}
-        py={"56"}
+        py={"36"}
         direction={"column"}
         justify={"center"}
+        textColor={"white"}
+        fontSize={"lg"}
+        fontWeight={"thin"}
       >
-        <Text>{PageMessage}</Text>
+        <Text fontWeight={"Mulish"} pl={5} fontSize={"6xl"}>
+          {PageMessage}
+        </Text>
         {/*Page Route Containers */}
-        <Box position={"absolute"} p={5} bottom={10} left={10} bgColor={"red"}>
-          <Flex direction={"row"} align={"center"} experimental_spaceX={10}>
-            <Text>Home</Text>
+        <Box
+          position={"absolute"}
+          px={5}
+          py={3}
+          bottom={10}
+          left={10}
+          bgColor={"#ee2c82"}
+        >
+          <Flex
+            direction={"row"}
+            align={"center"}
+            experimental_spaceX={5}
+            fontWeight={"light"}
+          >
+            <Text fontWeight={"thin"}>Home</Text>
             <ChevronRightIcon />
-            <Text>hello</Text>
+            <Text fontWeight={"thin"}>hello</Text>
           </Flex>
         </Box>
       </Flex>

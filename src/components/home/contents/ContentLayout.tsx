@@ -20,13 +20,7 @@ import Footer from "../../wrapper/Footers/Footer";
 const ContentLayout = () => {
   return (
     <>
-      <Box
-        maxW={"full"}
-        flexDir={"column"}
-        display={"flex"}
-        w={"full"}
-        fontFamily={"Rubik"}
-      >
+      <Box maxW={"full"} flexDir={"column"} display={"flex"} w={"full"}>
         <Carousel />
         <SectionCards />
         <SectionOne />

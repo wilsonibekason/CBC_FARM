@@ -9,7 +9,7 @@ const PageWrapper: React.FC<PageWrapperInterface> = ({ children }) => {
   return (
     <>
       <Wrapper>
-        <PageTitles />
+        <PageTitles PageMessage="About Our company" />
         {children}
       </Wrapper>
     </>
