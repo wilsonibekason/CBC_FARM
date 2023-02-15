@@ -25,6 +25,7 @@ const AboutLayout = () => {
       <Box maxW={"full"}>
         <Flex direction={"column"} justify={"center"}>
           <Header />
+          <AboutSectionOne />
           <SectionOne />
           <Countup />
           <Map />
