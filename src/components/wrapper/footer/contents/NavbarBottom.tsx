@@ -118,6 +118,7 @@ const NavbarBottom = () => {
                     width={"300px"}
                     suppressHydrationWarning
                     shadow={["-moz-initial", "2xl"]}
+                    zIndex={"999"}
                   >
                     {NavDropdownContent.map(({ id, name }) => (
                       <MenuItem

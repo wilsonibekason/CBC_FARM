@@ -86,7 +86,7 @@ p {
 }
 
 /* DECLARATIONS AND VARIABLES */
-body {
+:root {
   --wp--preset--color--black: #000000;
   --wp--preset--color--cyan-bluish-gray: #abb8c3;
   --wp--preset--color--white: #ffffff;
@@ -185,6 +185,14 @@ body {
   --wp--preset--spacing--60: 2.25rem;
   --wp--preset--spacing--70: 3.38rem;
   --wp--preset--spacing--80: 5.06rem;
+}
+
+.heading__text {
+  font-size: var(--wp--preset--font-size--medium);
+  color: var(--wp--preset--color--vivid-green-cyan);
+}
+.paragraph__text {
+  font-size: var(--wp--preset--font-size--small);
 }
 
 @tailwind components;

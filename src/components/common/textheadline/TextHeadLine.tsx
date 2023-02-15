@@ -1,14 +1,25 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { icons } from "../../../assets/images";
+import AOS from "aos";
+import Aos from "aos";
 interface TextHeadLineProps {
   readonly HeadImage?: File;
   TextHead?: string;
 }
 const TextHeadLine: React.FC<TextHeadLineProps> = ({ HeadImage, TextHead }) => {
+  React.useEffect(() => {
+    Aos.init();
+    Aos.refreshHard();
+  }, []);
   return (
     <>
-      <Flex direction={"column"} alignItems={"center"} justify={"center"}>
+      <Flex
+        direction={"column"}
+        justify={"center"}
+        as={"div"}
+        data-aos={"fade-in-left"}
+      >
         <Box w={"16"} h={"16"}>
           <Image
             src={icons.icon1}
