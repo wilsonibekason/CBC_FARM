@@ -138,7 +138,7 @@ const NavbarTop = () => {
               fontFamily={["-moz-initial", "Rubik", "SproDisplay"]}
               fontSize={"17px"}
               fontWeight={"semibold"}
-              letterSpacing={"tighter"}
+              letterSpacing={"wider"}
               display={"flex"}
               lineHeight={"5"}
               suppressContentEditableWarning
