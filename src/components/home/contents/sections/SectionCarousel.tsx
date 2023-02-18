@@ -25,7 +25,7 @@ import { icons } from "../../../../assets/images";
 const SectionCarousel = () => {
   return (
     <>
-      <Box as={"div"} pt={20} w={"full"}>
+      <Box as={"div"} w={"full"}>
         <Swiper
           direction="horizontal"
           speed={3000}
@@ -67,7 +67,7 @@ const SectionCarousel = () => {
                     bgPos={"center"}
                     bgSize={"cover"}
                     bgRepeat={"no-repeat"}
-                    py={200}
+                    py={250}
                     blur={"2xl"}
                     brightness={"50%"}
                     filter={"grayscale(90%)"}

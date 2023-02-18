@@ -43,7 +43,7 @@ import { Global } from "../../../../styles/themes/themes.global";
 import { TopDropdown } from "../../../common/export";
 import type { ISocialIcon } from "../../../../types/global.type";
 import uuid from "react-uuid";
-
+import { Link } from "react-router-dom";
 const SocialIcons: ISocialIcon[] = [
   {
     icon: <AiFillLinkedin size={30} />,
@@ -192,20 +192,22 @@ const NavbarTop = () => {
             </Box>
             <Box
               bgColor={"whiteAlpha.500"}
-              p={GlobalValues.NavPadY}
+              p={"2"}
               width={"80"}
               outline={"1px"}
             >
-              <Image
-                src={
-                  "https://demo.7iquid.com/agrisoil/wp-content/uploads/2022/07/logo-1.png"
-                }
-                alt={""}
-                height={"full"}
-                width={"full"}
-                maxWidth={"full"}
-                objectFit={"cover"}
-              />
+              <Link to={"/"}>
+                <Image
+                  src={
+                    "https://demo.7iquid.com/agrisoil/wp-content/uploads/2022/07/logo-1.png"
+                  }
+                  alt={""}
+                  height={"full"}
+                  width={"full"}
+                  maxWidth={"full"}
+                  objectFit={"cover"}
+                />
+              </Link>
             </Box>
             <Box
               display={["flex", "-webkit-flex", "-webkit-inline-flex"]}

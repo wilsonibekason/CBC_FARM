@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
       <Wrapper>
-        <AboutWrappwr />
+        <AboutWrapper />
       </Wrapper>
     </>
   );

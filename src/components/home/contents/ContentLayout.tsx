@@ -27,7 +27,7 @@ const ContentLayout = () => {
         w={"full"}
         fontFamily={"Rubik"}
       >
-        <Carousel />
+        {/* <Carousel /> */}
         <SectionCards />
         <SectionOne />
         <SectionTwo />
