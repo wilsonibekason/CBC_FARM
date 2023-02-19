@@ -18,23 +18,25 @@ import {
   Testimonials,
   SectionOne,
 } from "../../home/contents/sections";
+import { PageResponsive } from "../../export";
 
 const AboutLayout = () => {
   return (
     <>
-      <Box maxW={"full"}>
-        <Flex direction={"column"} justify={"center"}>
-          <Header />
-          <AboutSectionOne />
-          <Teams />
-          <SectionOne />
-          <Countup />
-          <Map />
-          <Testimonials />
-          <Partners />
-          <Journals />
-        </Flex>
-      </Box>
+      <PageResponsive Component={<Header />}>
+        <Box maxW={"full"}>
+          <Flex direction={"column"} justify={"center"}>
+            <AboutSectionOne />
+            <Teams />
+            <SectionOne />
+            <Countup />
+            <Map />
+            <Testimonials />
+            <Partners />
+            <Journals />
+          </Flex>
+        </Box>
+      </PageResponsive>
     </>
   );
 };
