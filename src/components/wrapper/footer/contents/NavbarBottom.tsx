@@ -103,7 +103,8 @@ const NavbarBottom = () => {
                     outline={"none"}
                     border={"none"}
                     fontSize={["-moz-initial", "xl"]}
-                    fontWeight={"semibold"}
+                    fontWeight={"normal"}
+                    letterSpacing={"wider"}
                     _selected={{ border: "none", bg: "transparent" }}
                   >
                     Projects <ChevronDownIcon />
@@ -117,6 +118,7 @@ const NavbarBottom = () => {
                     width={"300px"}
                     suppressHydrationWarning
                     shadow={["-moz-initial", "2xl"]}
+                    zIndex={"999"}
                   >
                     {NavDropdownContent.map(({ id, name }) => (
                       <MenuItem

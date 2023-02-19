@@ -16,7 +16,7 @@ const SectionOne = () => {
     <Box
       maxW={"full"}
       px={NavPadY}
-      py={"80"}
+      py={20}
       w={"full"}
       className={"group group-hover:bg-red-500 text-red"}
       position={"relative"}

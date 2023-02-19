@@ -225,4 +225,18 @@ const constructOrder = new OrderedList({
   level: "30%",
 });
 
+/// Define An Electron Shape
+
+class ElectronNuetrons {
+  constructor(neutron_values, neutron__atomic_filedirectoryentry) {
+    this.neutron_values = neutron_values;
+    this.neutron__atomic_filedirectoryentry =
+      neutron__atomic_filedirectoryentry;
+    this.next = null;
+    this.end = null;
+  }
+}
+
+class Electron {}
+
 // append add a new Node at the End of the List

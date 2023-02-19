@@ -43,7 +43,8 @@ import { Global } from "../../../../styles/themes/themes.global";
 import { TopDropdown } from "../../../common/export";
 import type { ISocialIcon } from "../../../../types/global.type";
 import uuid from "react-uuid";
-import { Link } from "react-router-dom";
+import { NavLink, NavLinkProps, Navigate, Link } from "react-router-dom";
+
 const SocialIcons: ISocialIcon[] = [
   {
     icon: <AiFillLinkedin size={30} />,
@@ -138,7 +139,7 @@ const NavbarTop = () => {
               fontFamily={["-moz-initial", "Rubik", "SproDisplay"]}
               fontSize={"17px"}
               fontWeight={"semibold"}
-              letterSpacing={"tighter"}
+              letterSpacing={"wider"}
               display={"flex"}
               lineHeight={"5"}
               suppressContentEditableWarning
