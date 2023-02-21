@@ -16,7 +16,7 @@ const AboutHeader = () => {
           bgSize={"cover"}
           py={20}
         >
-          <PageResponsiv>
+          <PageResponsive>
             <Flex direction={"column"} alignItems={"center"} justify={"center"}>
               <Box w={"16"} h={"16"}>
                 <Image
@@ -108,7 +108,7 @@ const AboutHeader = () => {
                   </Flex>
                 ))}
             </Flex>
-          </PageResponsiv>
+          </PageResponsive>
         </Flex>
       </Box>
     </>

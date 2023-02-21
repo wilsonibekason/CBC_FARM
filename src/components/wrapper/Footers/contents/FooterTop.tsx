@@ -207,6 +207,7 @@ const FooterTop = () => {
                       fontWeight={"medium"}
                       color={"gray.300"}
                       experimental_spaceY={10}
+                      
                     >
                       <Flex
                         direction={"column"}
